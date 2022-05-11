@@ -1,0 +1,14 @@
+import type { SimpleCommandMessage } from "discordx";
+import { Discord, Slash, SimpleCommand } from "discordx";
+
+Discord();
+export abstract class Bruh {
+  @SimpleCommand("hello", { aliases: ["hi", "hello", "yo", "haii", "hewo"] })
+  bruhSimple(command: SimpleCommandMessage): void {
+    command.message.reply("bruh");
+  }
+  @Slash()
+  private bruhSlash() {
+    return "bruh";
+  }
+}

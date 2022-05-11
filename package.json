@@ -1,0 +1,30 @@
+{
+  "name": "bruh",
+  "version": "1.0.2",
+  "description": "bruh",
+  "main": "build/main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo test",
+    "build": "tsc",
+    "build:changelog": "npx @discordx/changelog --root=src",
+    "dev": "node --loader ts-node/esm/transpile-only src/main.ts",
+    "serve": "node build/main.js",
+    "start": "nodemon --exec node --loader ts-node/esm/transpile-only src/main.ts"
+  },
+  "author": "Knox",
+  "license": "Unlicense",
+  "dependencies": {
+    "@discordx/importer": "^1.1.2",
+    "discord.js": "^13.6.0",
+    "discordx": "^9.5.3",
+    "dotenv": "^16.0.0",
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.31",
+    "nodemon": "^2.0.16",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.4"
+  }
+}
